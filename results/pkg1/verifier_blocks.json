@@ -1,0 +1,239 @@
+{
+  "meta": {
+    "source_nodes": "results/pkg1/sbg_nodes.json",
+    "package_dir": "samples/pkg1",
+    "count": 23
+  },
+  "nodes": [
+    {
+      "id": "n1",
+      "call": "child_process.execFileSync",
+      "label": "PROC",
+      "file": "install.js",
+      "line": 102,
+      "col": 14,
+      "snippet": "stdout = child_process.execFileSync(command.shift(), command, {",
+      "block": "    stdout = child_process.execFileSync(command.shift(), command, {\n      // Without this, this install script strangely crashes with the error\n      // \"EACCES: permission denied, write\" but only on Ubuntu Linux when node is\n      // installed from the Snap Store. This is not a problem when you download\n      // the official version of node. The problem appears to be that stderr\n      // (i.e. file descriptor 2) isn't writable?\n      //\n      // More info:\n      // - https://snapcraft.io/ (what the Snap Store is)\n      // - https://nodejs.org/dist/ (download the official version of node)\n      // - https://github.com/evanw/esbuild/issues/1711#issuecomment-1027554035\n      //\n      stdio: \"pipe\"\n    }).toString().trim();"
+    },
+    {
+      "id": "n2",
+      "call": "child_process.execFileSync",
+      "label": "PROC",
+      "file": "install.js",
+      "line": 120,
+      "col": 26,
+      "snippet": "os3 = \"macOS \" + child_process.execFileSync(\"sw_vers\", [\"-productVersion\"]).toString().trim();",
+      "block": "        os3 = \"macOS \" + child_process.execFileSync(\"sw_vers\", [\"-productVersion\"]).toString().trim();"
+    },
+    {
+      "id": "n3",
+      "call": "https.get",
+      "label": "NET",
+      "file": "install.js",
+      "line": 148,
+      "col": 5,
+      "snippet": "https.get(url, (res) => {",
+      "block": "    https.get(url, (res) => {\n      if ((res.statusCode === 301 || res.statusCode === 302) && res.headers.location)\n        return fetch(res.headers.location).then(resolve, reject);\n      if (res.statusCode !== 200)\n        return reject(new Error(`Server responded with ${res.statusCode}`));\n      let chunks = [];\n      res.on(\"data\", (chunk) => chunks.push(chunk));\n      res.on(\"end\", () => resolve(Buffer.concat(chunks)));\n    }).on(\"error\", reject);"
+    },
+    {
+      "id": "n4",
+      "call": "fetch",
+      "label": "NET",
+      "file": "install.js",
+      "line": 150,
+      "col": 16,
+      "snippet": "return fetch(res.headers.location).then(resolve, reject);",
+      "block": "        return fetch(res.headers.location).then(resolve, reject);"
+    },
+    {
+      "id": "n5",
+      "call": "zlib.unzipSync",
+      "label": "ARCHIVE",
+      "file": "install.js",
+      "line": 161,
+      "col": 14,
+      "snippet": "buffer = zlib.unzipSync(buffer);",
+      "block": "    buffer = zlib.unzipSync(buffer);"
+    },
+    {
+      "id": "n6",
+      "call": "fs.mkdirSync",
+      "label": "FS",
+      "file": "install.js",
+      "line": 183,
+      "col": 3,
+      "snippet": "fs2.mkdirSync(installDir);",
+      "block": "  fs2.mkdirSync(installDir);"
+    },
+    {
+      "id": "n7",
+      "call": "fs.writeFileSync",
+      "label": "FS",
+      "file": "install.js",
+      "line": 185,
+      "col": 5,
+      "snippet": "fs2.writeFileSync(path2.join(installDir, \"package.json\"), \"{}\");",
+      "block": "    fs2.writeFileSync(path2.join(installDir, \"package.json\"), \"{}\");"
+    },
+    {
+      "id": "n8",
+      "call": "child_process.execSync",
+      "label": "PROC",
+      "file": "install.js",
+      "line": 186,
+      "col": 5,
+      "snippet": "child_process.execSync(",
+      "block": "    child_process.execSync(\n      `npm install --loglevel=error --prefer-offline --no-audit --progress=false ${pkg}@${versionFromPackageJSON}`,\n      { cwd: installDir, stdio: \"pipe\", env }\n    );"
+    },
+    {
+      "id": "n9",
+      "call": "fs.renameSync",
+      "label": "FS",
+      "file": "install.js",
+      "line": 191,
+      "col": 5,
+      "snippet": "fs2.renameSync(installedBinPath, binPath);",
+      "block": "    fs2.renameSync(installedBinPath, binPath);"
+    },
+    {
+      "id": "n10",
+      "call": "fs.readdirSync",
+      "label": "FS",
+      "file": "install.js",
+      "line": 200,
+      "col": 23,
+      "snippet": "for (const entry of fs2.readdirSync(dir)) {",
+      "block": "  for (const entry of fs2.readdirSync(dir)) {"
+    },
+    {
+      "id": "n11",
+      "call": "fs.lstatSync",
+      "label": "FS",
+      "file": "install.js",
+      "line": 204,
+      "col": 15,
+      "snippet": "stats = fs2.lstatSync(entryPath);",
+      "block": "      stats = fs2.lstatSync(entryPath);"
+    },
+    {
+      "id": "n12",
+      "call": "fs.unlinkSync",
+      "label": "FS",
+      "file": "install.js",
+      "line": 209,
+      "col": 10,
+      "snippet": "else fs2.unlinkSync(entryPath);",
+      "block": "    else fs2.unlinkSync(entryPath);"
+    },
+    {
+      "id": "n13",
+      "call": "fs.rmdirSync",
+      "label": "FS",
+      "file": "install.js",
+      "line": 211,
+      "col": 3,
+      "snippet": "fs2.rmdirSync(dir);",
+      "block": "  fs2.rmdirSync(dir);"
+    },
+    {
+      "id": "n14",
+      "call": "fs.writeFileSync",
+      "label": "FS",
+      "file": "install.js",
+      "line": 215,
+      "col": 3,
+      "snippet": "fs2.writeFileSync(toPath, `#!/usr/bin/env node",
+      "block": "  fs2.writeFileSync(toPath, `#!/usr/bin/env node\nrequire('child_process').execFileSync(${pathString}, process.argv.slice(2), { stdio: 'inherit' });\n`);"
+    },
+    {
+      "id": "n15",
+      "call": "fs.readFileSync",
+      "label": "FS",
+      "file": "install.js",
+      "line": 219,
+      "col": 16,
+      "snippet": "const code = fs2.readFileSync(libMain, \"utf8\");",
+      "block": "  const code = fs2.readFileSync(libMain, \"utf8\");"
+    },
+    {
+      "id": "n16",
+      "call": "fs.writeFileSync",
+      "label": "FS",
+      "file": "install.js",
+      "line": 220,
+      "col": 3,
+      "snippet": "fs2.writeFileSync(libMain, `var ESBUILD_BINARY_PATH = ${pathString};",
+      "block": "  fs2.writeFileSync(libMain, `var ESBUILD_BINARY_PATH = ${pathString};\n${code}`);"
+    },
+    {
+      "id": "n17",
+      "call": "fs.linkSync",
+      "label": "FS",
+      "file": "install.js",
+      "line": 228,
+      "col": 7,
+      "snippet": "fs2.linkSync(binPath, tempPath);",
+      "block": "      fs2.linkSync(binPath, tempPath);"
+    },
+    {
+      "id": "n18",
+      "call": "fs.renameSync",
+      "label": "FS",
+      "file": "install.js",
+      "line": 229,
+      "col": 7,
+      "snippet": "fs2.renameSync(tempPath, toPath);",
+      "block": "      fs2.renameSync(tempPath, toPath);"
+    },
+    {
+      "id": "n19",
+      "call": "fs.unlinkSync",
+      "label": "FS",
+      "file": "install.js",
+      "line": 231,
+      "col": 7,
+      "snippet": "fs2.unlinkSync(tempPath);",
+      "block": "      fs2.unlinkSync(tempPath);"
+    },
+    {
+      "id": "n20",
+      "call": "fs.writeFileSync",
+      "label": "FS",
+      "file": "install.js",
+      "line": 240,
+      "col": 5,
+      "snippet": "fs2.writeFileSync(binPath, extractFileFromTarGzip(await fetch(url), subpath));",
+      "block": "    fs2.writeFileSync(binPath, extractFileFromTarGzip(await fetch(url), subpath));"
+    },
+    {
+      "id": "n21",
+      "call": "fetch",
+      "label": "NET",
+      "file": "install.js",
+      "line": 240,
+      "col": 61,
+      "snippet": "fs2.writeFileSync(binPath, extractFileFromTarGzip(await fetch(url), subpath));",
+      "block": "    fs2.writeFileSync(binPath, extractFileFromTarGzip(await fetch(url), subpath));"
+    },
+    {
+      "id": "n22",
+      "call": "fs.chmodSync",
+      "label": "FS",
+      "file": "install.js",
+      "line": 241,
+      "col": 5,
+      "snippet": "fs2.chmodSync(binPath, 493);",
+      "block": "    fs2.chmodSync(binPath, 493);"
+    },
+    {
+      "id": "n23",
+      "call": "fs.existsSync",
+      "label": "FS",
+      "file": "install.js",
+      "line": 249,
+      "col": 10,
+      "snippet": "if (!fs2.existsSync(ESBUILD_BINARY_PATH)) {",
+      "block": "    if (!fs2.existsSync(ESBUILD_BINARY_PATH)) {"
+    }
+  ]
+}

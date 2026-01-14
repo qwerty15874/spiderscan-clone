@@ -1,0 +1,163 @@
+{
+  "meta": {
+    "source_nodes": "results/pkg1/sbg_nodes.json",
+    "source_evidence": "results/pkg1/verifier_evidence_v2.json",
+    "node_count": 23
+  },
+  "template_matches": [
+    {
+      "template": "T1_NET_ARCHIVE_FS_PROC",
+      "matched": true,
+      "sequence": [
+        "NET",
+        "ARCHIVE",
+        "FS",
+        "PROC"
+      ],
+      "nodes": [
+        {
+          "id": "n3",
+          "call": "https.get",
+          "label": "NET",
+          "file": "install.js",
+          "line": 148,
+          "col": 5,
+          "snippet": "https.get(url, (res) => {",
+          "urls": [],
+          "domains": [],
+          "first_string_arg": "data"
+        },
+        {
+          "id": "n5",
+          "call": "zlib.unzipSync",
+          "label": "ARCHIVE",
+          "file": "install.js",
+          "line": 161,
+          "col": 14,
+          "snippet": "buffer = zlib.unzipSync(buffer);",
+          "urls": [],
+          "domains": [],
+          "first_string_arg": null
+        },
+        {
+          "id": "n6",
+          "call": "fs.mkdirSync",
+          "label": "FS",
+          "file": "install.js",
+          "line": 183,
+          "col": 3,
+          "snippet": "fs2.mkdirSync(installDir);",
+          "urls": [],
+          "domains": [],
+          "first_string_arg": null
+        },
+        {
+          "id": "n8",
+          "call": "child_process.execSync",
+          "label": "PROC",
+          "file": "install.js",
+          "line": 186,
+          "col": 5,
+          "snippet": "child_process.execSync(",
+          "urls": [],
+          "domains": [],
+          "first_string_arg": "pipe"
+        }
+      ]
+    },
+    {
+      "template": "T2_NET_FS_PROC",
+      "matched": true,
+      "sequence": [
+        "NET",
+        "FS",
+        "PROC"
+      ],
+      "nodes": [
+        {
+          "id": "n3",
+          "call": "https.get",
+          "label": "NET",
+          "file": "install.js",
+          "line": 148,
+          "col": 5,
+          "snippet": "https.get(url, (res) => {",
+          "urls": [],
+          "domains": [],
+          "first_string_arg": "data"
+        },
+        {
+          "id": "n6",
+          "call": "fs.mkdirSync",
+          "label": "FS",
+          "file": "install.js",
+          "line": 183,
+          "col": 3,
+          "snippet": "fs2.mkdirSync(installDir);",
+          "urls": [],
+          "domains": [],
+          "first_string_arg": null
+        },
+        {
+          "id": "n8",
+          "call": "child_process.execSync",
+          "label": "PROC",
+          "file": "install.js",
+          "line": 186,
+          "col": 5,
+          "snippet": "child_process.execSync(",
+          "urls": [],
+          "domains": [],
+          "first_string_arg": "pipe"
+        }
+      ]
+    },
+    {
+      "template": "T3_FS_CHMOD_PROC",
+      "matched": true,
+      "sequence": [
+        "FS",
+        "FS",
+        "PROC"
+      ],
+      "nodes": [
+        {
+          "id": "n6",
+          "call": "fs.mkdirSync",
+          "label": "FS",
+          "file": "install.js",
+          "line": 183,
+          "col": 3,
+          "snippet": "fs2.mkdirSync(installDir);",
+          "urls": [],
+          "domains": [],
+          "first_string_arg": null
+        },
+        {
+          "id": "n7",
+          "call": "fs.writeFileSync",
+          "label": "FS",
+          "file": "install.js",
+          "line": 185,
+          "col": 5,
+          "snippet": "fs2.writeFileSync(path2.join(installDir, \"package.json\"), \"{}\");",
+          "urls": [],
+          "domains": [],
+          "first_string_arg": "package.json"
+        },
+        {
+          "id": "n8",
+          "call": "child_process.execSync",
+          "label": "PROC",
+          "file": "install.js",
+          "line": 186,
+          "col": 5,
+          "snippet": "child_process.execSync(",
+          "urls": [],
+          "domains": [],
+          "first_string_arg": "pipe"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1694 @@
+{
+  "meta": {
+    "source_blocks": "results/pkg1/verifier_blocks.json",
+    "package_dir": "samples/pkg1",
+    "node_count": 23,
+    "edge_count": 146,
+    "edge_type": "DD_APPROX"
+  },
+  "nodes": [
+    {
+      "id": "n1",
+      "call": "child_process.execFileSync",
+      "label": "PROC",
+      "file": "install.js",
+      "line": 102,
+      "col": 14
+    },
+    {
+      "id": "n2",
+      "call": "child_process.execFileSync",
+      "label": "PROC",
+      "file": "install.js",
+      "line": 120,
+      "col": 26
+    },
+    {
+      "id": "n3",
+      "call": "https.get",
+      "label": "NET",
+      "file": "install.js",
+      "line": 148,
+      "col": 5
+    },
+    {
+      "id": "n4",
+      "call": "fetch",
+      "label": "NET",
+      "file": "install.js",
+      "line": 150,
+      "col": 16
+    },
+    {
+      "id": "n5",
+      "call": "zlib.unzipSync",
+      "label": "ARCHIVE",
+      "file": "install.js",
+      "line": 161,
+      "col": 14
+    },
+    {
+      "id": "n6",
+      "call": "fs.mkdirSync",
+      "label": "FS",
+      "file": "install.js",
+      "line": 183,
+      "col": 3
+    },
+    {
+      "id": "n7",
+      "call": "fs.writeFileSync",
+      "label": "FS",
+      "file": "install.js",
+      "line": 185,
+      "col": 5
+    },
+    {
+      "id": "n8",
+      "call": "child_process.execSync",
+      "label": "PROC",
+      "file": "install.js",
+      "line": 186,
+      "col": 5
+    },
+    {
+      "id": "n9",
+      "call": "fs.renameSync",
+      "label": "FS",
+      "file": "install.js",
+      "line": 191,
+      "col": 5
+    },
+    {
+      "id": "n10",
+      "call": "fs.readdirSync",
+      "label": "FS",
+      "file": "install.js",
+      "line": 200,
+      "col": 23
+    },
+    {
+      "id": "n11",
+      "call": "fs.lstatSync",
+      "label": "FS",
+      "file": "install.js",
+      "line": 204,
+      "col": 15
+    },
+    {
+      "id": "n12",
+      "call": "fs.unlinkSync",
+      "label": "FS",
+      "file": "install.js",
+      "line": 209,
+      "col": 10
+    },
+    {
+      "id": "n13",
+      "call": "fs.rmdirSync",
+      "label": "FS",
+      "file": "install.js",
+      "line": 211,
+      "col": 3
+    },
+    {
+      "id": "n14",
+      "call": "fs.writeFileSync",
+      "label": "FS",
+      "file": "install.js",
+      "line": 215,
+      "col": 3
+    },
+    {
+      "id": "n15",
+      "call": "fs.readFileSync",
+      "label": "FS",
+      "file": "install.js",
+      "line": 219,
+      "col": 16
+    },
+    {
+      "id": "n16",
+      "call": "fs.writeFileSync",
+      "label": "FS",
+      "file": "install.js",
+      "line": 220,
+      "col": 3
+    },
+    {
+      "id": "n17",
+      "call": "fs.linkSync",
+      "label": "FS",
+      "file": "install.js",
+      "line": 228,
+      "col": 7
+    },
+    {
+      "id": "n18",
+      "call": "fs.renameSync",
+      "label": "FS",
+      "file": "install.js",
+      "line": 229,
+      "col": 7
+    },
+    {
+      "id": "n19",
+      "call": "fs.unlinkSync",
+      "label": "FS",
+      "file": "install.js",
+      "line": 231,
+      "col": 7
+    },
+    {
+      "id": "n20",
+      "call": "fs.writeFileSync",
+      "label": "FS",
+      "file": "install.js",
+      "line": 240,
+      "col": 5
+    },
+    {
+      "id": "n21",
+      "call": "fetch",
+      "label": "NET",
+      "file": "install.js",
+      "line": 240,
+      "col": 61
+    },
+    {
+      "id": "n22",
+      "call": "fs.chmodSync",
+      "label": "FS",
+      "file": "install.js",
+      "line": 241,
+      "col": 5
+    },
+    {
+      "id": "n23",
+      "call": "fs.existsSync",
+      "label": "FS",
+      "file": "install.js",
+      "line": 249,
+      "col": 10
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "type": "DD_APPROX",
+      "src": "n1",
+      "dst": "n3",
+      "file": "install.js",
+      "reason_vars": [
+        "error",
+        "https",
+        "on",
+        "with"
+      ]
+    },
+    {
+      "id": "e2",
+      "type": "DD_APPROX",
+      "src": "n1",
+      "dst": "n8",
+      "file": "install.js",
+      "reason_vars": [
+        "error"
+      ]
+    },
+    {
+      "id": "e3",
+      "type": "DD_APPROX",
+      "src": "n3",
+      "dst": "n4",
+      "file": "install.js",
+      "reason_vars": [
+        "fetch",
+        "headers",
+        "location",
+        "reject",
+        "res",
+        "resolve",
+        "then"
+      ]
+    },
+    {
+      "id": "e4",
+      "type": "DD_APPROX",
+      "src": "n3",
+      "dst": "n8",
+      "file": "install.js",
+      "reason_vars": [
+        "error"
+      ]
+    },
+    {
+      "id": "e5",
+      "type": "DD_APPROX",
+      "src": "n3",
+      "dst": "n20",
+      "file": "install.js",
+      "reason_vars": [
+        "fetch",
+        "url"
+      ]
+    },
+    {
+      "id": "e6",
+      "type": "DD_APPROX",
+      "src": "n3",
+      "dst": "n21",
+      "file": "install.js",
+      "reason_vars": [
+        "fetch",
+        "url"
+      ]
+    },
+    {
+      "id": "e7",
+      "type": "DD_APPROX",
+      "src": "n4",
+      "dst": "n20",
+      "file": "install.js",
+      "reason_vars": [
+        "fetch"
+      ]
+    },
+    {
+      "id": "e8",
+      "type": "DD_APPROX",
+      "src": "n4",
+      "dst": "n21",
+      "file": "install.js",
+      "reason_vars": [
+        "fetch"
+      ]
+    },
+    {
+      "id": "e9",
+      "type": "DD_APPROX",
+      "src": "n6",
+      "dst": "n7",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2",
+        "installDir"
+      ]
+    },
+    {
+      "id": "e10",
+      "type": "DD_APPROX",
+      "src": "n6",
+      "dst": "n8",
+      "file": "install.js",
+      "reason_vars": [
+        "installDir"
+      ]
+    },
+    {
+      "id": "e11",
+      "type": "DD_APPROX",
+      "src": "n6",
+      "dst": "n9",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e12",
+      "type": "DD_APPROX",
+      "src": "n6",
+      "dst": "n10",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e13",
+      "type": "DD_APPROX",
+      "src": "n6",
+      "dst": "n11",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e14",
+      "type": "DD_APPROX",
+      "src": "n6",
+      "dst": "n12",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e15",
+      "type": "DD_APPROX",
+      "src": "n6",
+      "dst": "n13",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e16",
+      "type": "DD_APPROX",
+      "src": "n6",
+      "dst": "n14",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e17",
+      "type": "DD_APPROX",
+      "src": "n6",
+      "dst": "n15",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e18",
+      "type": "DD_APPROX",
+      "src": "n6",
+      "dst": "n16",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e19",
+      "type": "DD_APPROX",
+      "src": "n6",
+      "dst": "n17",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e20",
+      "type": "DD_APPROX",
+      "src": "n6",
+      "dst": "n18",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e21",
+      "type": "DD_APPROX",
+      "src": "n6",
+      "dst": "n19",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e22",
+      "type": "DD_APPROX",
+      "src": "n6",
+      "dst": "n20",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e23",
+      "type": "DD_APPROX",
+      "src": "n6",
+      "dst": "n21",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e24",
+      "type": "DD_APPROX",
+      "src": "n6",
+      "dst": "n22",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e25",
+      "type": "DD_APPROX",
+      "src": "n6",
+      "dst": "n23",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e26",
+      "type": "DD_APPROX",
+      "src": "n7",
+      "dst": "n8",
+      "file": "install.js",
+      "reason_vars": [
+        "installDir"
+      ]
+    },
+    {
+      "id": "e27",
+      "type": "DD_APPROX",
+      "src": "n7",
+      "dst": "n9",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e28",
+      "type": "DD_APPROX",
+      "src": "n7",
+      "dst": "n10",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e29",
+      "type": "DD_APPROX",
+      "src": "n7",
+      "dst": "n11",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e30",
+      "type": "DD_APPROX",
+      "src": "n7",
+      "dst": "n12",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e31",
+      "type": "DD_APPROX",
+      "src": "n7",
+      "dst": "n13",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e32",
+      "type": "DD_APPROX",
+      "src": "n7",
+      "dst": "n14",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2",
+        "writeFileSync"
+      ]
+    },
+    {
+      "id": "e33",
+      "type": "DD_APPROX",
+      "src": "n7",
+      "dst": "n15",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e34",
+      "type": "DD_APPROX",
+      "src": "n7",
+      "dst": "n16",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2",
+        "writeFileSync"
+      ]
+    },
+    {
+      "id": "e35",
+      "type": "DD_APPROX",
+      "src": "n7",
+      "dst": "n17",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e36",
+      "type": "DD_APPROX",
+      "src": "n7",
+      "dst": "n18",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e37",
+      "type": "DD_APPROX",
+      "src": "n7",
+      "dst": "n19",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e38",
+      "type": "DD_APPROX",
+      "src": "n7",
+      "dst": "n20",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2",
+        "writeFileSync"
+      ]
+    },
+    {
+      "id": "e39",
+      "type": "DD_APPROX",
+      "src": "n7",
+      "dst": "n21",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2",
+        "writeFileSync"
+      ]
+    },
+    {
+      "id": "e40",
+      "type": "DD_APPROX",
+      "src": "n7",
+      "dst": "n22",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e41",
+      "type": "DD_APPROX",
+      "src": "n7",
+      "dst": "n23",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e42",
+      "type": "DD_APPROX",
+      "src": "n9",
+      "dst": "n10",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e43",
+      "type": "DD_APPROX",
+      "src": "n9",
+      "dst": "n11",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e44",
+      "type": "DD_APPROX",
+      "src": "n9",
+      "dst": "n12",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e45",
+      "type": "DD_APPROX",
+      "src": "n9",
+      "dst": "n13",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e46",
+      "type": "DD_APPROX",
+      "src": "n9",
+      "dst": "n14",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e47",
+      "type": "DD_APPROX",
+      "src": "n9",
+      "dst": "n15",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e48",
+      "type": "DD_APPROX",
+      "src": "n9",
+      "dst": "n16",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e49",
+      "type": "DD_APPROX",
+      "src": "n9",
+      "dst": "n17",
+      "file": "install.js",
+      "reason_vars": [
+        "binPath",
+        "fs2"
+      ]
+    },
+    {
+      "id": "e50",
+      "type": "DD_APPROX",
+      "src": "n9",
+      "dst": "n18",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e51",
+      "type": "DD_APPROX",
+      "src": "n9",
+      "dst": "n19",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e52",
+      "type": "DD_APPROX",
+      "src": "n9",
+      "dst": "n20",
+      "file": "install.js",
+      "reason_vars": [
+        "binPath",
+        "fs2"
+      ]
+    },
+    {
+      "id": "e53",
+      "type": "DD_APPROX",
+      "src": "n9",
+      "dst": "n21",
+      "file": "install.js",
+      "reason_vars": [
+        "binPath",
+        "fs2"
+      ]
+    },
+    {
+      "id": "e54",
+      "type": "DD_APPROX",
+      "src": "n9",
+      "dst": "n22",
+      "file": "install.js",
+      "reason_vars": [
+        "binPath",
+        "fs2"
+      ]
+    },
+    {
+      "id": "e55",
+      "type": "DD_APPROX",
+      "src": "n9",
+      "dst": "n23",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e56",
+      "type": "DD_APPROX",
+      "src": "n10",
+      "dst": "n11",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e57",
+      "type": "DD_APPROX",
+      "src": "n10",
+      "dst": "n12",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e58",
+      "type": "DD_APPROX",
+      "src": "n10",
+      "dst": "n13",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e59",
+      "type": "DD_APPROX",
+      "src": "n10",
+      "dst": "n14",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e60",
+      "type": "DD_APPROX",
+      "src": "n10",
+      "dst": "n15",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e61",
+      "type": "DD_APPROX",
+      "src": "n10",
+      "dst": "n16",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e62",
+      "type": "DD_APPROX",
+      "src": "n10",
+      "dst": "n17",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e63",
+      "type": "DD_APPROX",
+      "src": "n10",
+      "dst": "n18",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e64",
+      "type": "DD_APPROX",
+      "src": "n10",
+      "dst": "n19",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e65",
+      "type": "DD_APPROX",
+      "src": "n10",
+      "dst": "n20",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e66",
+      "type": "DD_APPROX",
+      "src": "n10",
+      "dst": "n21",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e67",
+      "type": "DD_APPROX",
+      "src": "n10",
+      "dst": "n22",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e68",
+      "type": "DD_APPROX",
+      "src": "n10",
+      "dst": "n23",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e69",
+      "type": "DD_APPROX",
+      "src": "n11",
+      "dst": "n12",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e70",
+      "type": "DD_APPROX",
+      "src": "n11",
+      "dst": "n13",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e71",
+      "type": "DD_APPROX",
+      "src": "n11",
+      "dst": "n14",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e72",
+      "type": "DD_APPROX",
+      "src": "n11",
+      "dst": "n15",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e73",
+      "type": "DD_APPROX",
+      "src": "n11",
+      "dst": "n16",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e74",
+      "type": "DD_APPROX",
+      "src": "n11",
+      "dst": "n17",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e75",
+      "type": "DD_APPROX",
+      "src": "n11",
+      "dst": "n18",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e76",
+      "type": "DD_APPROX",
+      "src": "n11",
+      "dst": "n19",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e77",
+      "type": "DD_APPROX",
+      "src": "n11",
+      "dst": "n20",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e78",
+      "type": "DD_APPROX",
+      "src": "n11",
+      "dst": "n21",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e79",
+      "type": "DD_APPROX",
+      "src": "n11",
+      "dst": "n22",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e80",
+      "type": "DD_APPROX",
+      "src": "n11",
+      "dst": "n23",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e81",
+      "type": "DD_APPROX",
+      "src": "n12",
+      "dst": "n13",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e82",
+      "type": "DD_APPROX",
+      "src": "n12",
+      "dst": "n14",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e83",
+      "type": "DD_APPROX",
+      "src": "n12",
+      "dst": "n15",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e84",
+      "type": "DD_APPROX",
+      "src": "n12",
+      "dst": "n16",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e85",
+      "type": "DD_APPROX",
+      "src": "n12",
+      "dst": "n17",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e86",
+      "type": "DD_APPROX",
+      "src": "n12",
+      "dst": "n18",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e87",
+      "type": "DD_APPROX",
+      "src": "n12",
+      "dst": "n19",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e88",
+      "type": "DD_APPROX",
+      "src": "n12",
+      "dst": "n20",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e89",
+      "type": "DD_APPROX",
+      "src": "n12",
+      "dst": "n21",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e90",
+      "type": "DD_APPROX",
+      "src": "n12",
+      "dst": "n22",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e91",
+      "type": "DD_APPROX",
+      "src": "n12",
+      "dst": "n23",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e92",
+      "type": "DD_APPROX",
+      "src": "n13",
+      "dst": "n14",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e93",
+      "type": "DD_APPROX",
+      "src": "n13",
+      "dst": "n15",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e94",
+      "type": "DD_APPROX",
+      "src": "n13",
+      "dst": "n16",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e95",
+      "type": "DD_APPROX",
+      "src": "n13",
+      "dst": "n17",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e96",
+      "type": "DD_APPROX",
+      "src": "n13",
+      "dst": "n18",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e97",
+      "type": "DD_APPROX",
+      "src": "n13",
+      "dst": "n19",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e98",
+      "type": "DD_APPROX",
+      "src": "n13",
+      "dst": "n20",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e99",
+      "type": "DD_APPROX",
+      "src": "n13",
+      "dst": "n21",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e100",
+      "type": "DD_APPROX",
+      "src": "n13",
+      "dst": "n22",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e101",
+      "type": "DD_APPROX",
+      "src": "n13",
+      "dst": "n23",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e102",
+      "type": "DD_APPROX",
+      "src": "n14",
+      "dst": "n15",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e103",
+      "type": "DD_APPROX",
+      "src": "n14",
+      "dst": "n16",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2",
+        "writeFileSync"
+      ]
+    },
+    {
+      "id": "e104",
+      "type": "DD_APPROX",
+      "src": "n14",
+      "dst": "n17",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e105",
+      "type": "DD_APPROX",
+      "src": "n14",
+      "dst": "n18",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e106",
+      "type": "DD_APPROX",
+      "src": "n14",
+      "dst": "n19",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e107",
+      "type": "DD_APPROX",
+      "src": "n14",
+      "dst": "n20",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2",
+        "writeFileSync"
+      ]
+    },
+    {
+      "id": "e108",
+      "type": "DD_APPROX",
+      "src": "n14",
+      "dst": "n21",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2",
+        "writeFileSync"
+      ]
+    },
+    {
+      "id": "e109",
+      "type": "DD_APPROX",
+      "src": "n14",
+      "dst": "n22",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e110",
+      "type": "DD_APPROX",
+      "src": "n14",
+      "dst": "n23",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e111",
+      "type": "DD_APPROX",
+      "src": "n15",
+      "dst": "n16",
+      "file": "install.js",
+      "reason_vars": [
+        "code",
+        "fs2"
+      ]
+    },
+    {
+      "id": "e112",
+      "type": "DD_APPROX",
+      "src": "n15",
+      "dst": "n17",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e113",
+      "type": "DD_APPROX",
+      "src": "n15",
+      "dst": "n18",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e114",
+      "type": "DD_APPROX",
+      "src": "n15",
+      "dst": "n19",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e115",
+      "type": "DD_APPROX",
+      "src": "n15",
+      "dst": "n20",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e116",
+      "type": "DD_APPROX",
+      "src": "n15",
+      "dst": "n21",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e117",
+      "type": "DD_APPROX",
+      "src": "n15",
+      "dst": "n22",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e118",
+      "type": "DD_APPROX",
+      "src": "n15",
+      "dst": "n23",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e119",
+      "type": "DD_APPROX",
+      "src": "n16",
+      "dst": "n17",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e120",
+      "type": "DD_APPROX",
+      "src": "n16",
+      "dst": "n18",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e121",
+      "type": "DD_APPROX",
+      "src": "n16",
+      "dst": "n19",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e122",
+      "type": "DD_APPROX",
+      "src": "n16",
+      "dst": "n20",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2",
+        "writeFileSync"
+      ]
+    },
+    {
+      "id": "e123",
+      "type": "DD_APPROX",
+      "src": "n16",
+      "dst": "n21",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2",
+        "writeFileSync"
+      ]
+    },
+    {
+      "id": "e124",
+      "type": "DD_APPROX",
+      "src": "n16",
+      "dst": "n22",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e125",
+      "type": "DD_APPROX",
+      "src": "n16",
+      "dst": "n23",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e126",
+      "type": "DD_APPROX",
+      "src": "n17",
+      "dst": "n18",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e127",
+      "type": "DD_APPROX",
+      "src": "n17",
+      "dst": "n19",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e128",
+      "type": "DD_APPROX",
+      "src": "n17",
+      "dst": "n20",
+      "file": "install.js",
+      "reason_vars": [
+        "binPath",
+        "fs2"
+      ]
+    },
+    {
+      "id": "e129",
+      "type": "DD_APPROX",
+      "src": "n17",
+      "dst": "n21",
+      "file": "install.js",
+      "reason_vars": [
+        "binPath",
+        "fs2"
+      ]
+    },
+    {
+      "id": "e130",
+      "type": "DD_APPROX",
+      "src": "n17",
+      "dst": "n22",
+      "file": "install.js",
+      "reason_vars": [
+        "binPath",
+        "fs2"
+      ]
+    },
+    {
+      "id": "e131",
+      "type": "DD_APPROX",
+      "src": "n17",
+      "dst": "n23",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e132",
+      "type": "DD_APPROX",
+      "src": "n18",
+      "dst": "n19",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e133",
+      "type": "DD_APPROX",
+      "src": "n18",
+      "dst": "n20",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e134",
+      "type": "DD_APPROX",
+      "src": "n18",
+      "dst": "n21",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e135",
+      "type": "DD_APPROX",
+      "src": "n18",
+      "dst": "n22",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e136",
+      "type": "DD_APPROX",
+      "src": "n18",
+      "dst": "n23",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e137",
+      "type": "DD_APPROX",
+      "src": "n19",
+      "dst": "n20",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e138",
+      "type": "DD_APPROX",
+      "src": "n19",
+      "dst": "n21",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e139",
+      "type": "DD_APPROX",
+      "src": "n19",
+      "dst": "n22",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e140",
+      "type": "DD_APPROX",
+      "src": "n19",
+      "dst": "n23",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e141",
+      "type": "DD_APPROX",
+      "src": "n20",
+      "dst": "n21",
+      "file": "install.js",
+      "reason_vars": [
+        "binPath",
+        "extractFileFromTarGzip",
+        "fetch",
+        "fs2",
+        "subpath",
+        "url",
+        "writeFileSync"
+      ]
+    },
+    {
+      "id": "e142",
+      "type": "DD_APPROX",
+      "src": "n20",
+      "dst": "n22",
+      "file": "install.js",
+      "reason_vars": [
+        "binPath",
+        "fs2"
+      ]
+    },
+    {
+      "id": "e143",
+      "type": "DD_APPROX",
+      "src": "n20",
+      "dst": "n23",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e144",
+      "type": "DD_APPROX",
+      "src": "n21",
+      "dst": "n22",
+      "file": "install.js",
+      "reason_vars": [
+        "binPath",
+        "fs2"
+      ]
+    },
+    {
+      "id": "e145",
+      "type": "DD_APPROX",
+      "src": "n21",
+      "dst": "n23",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    },
+    {
+      "id": "e146",
+      "type": "DD_APPROX",
+      "src": "n22",
+      "dst": "n23",
+      "file": "install.js",
+      "reason_vars": [
+        "fs2"
+      ]
+    }
+  ]
+}

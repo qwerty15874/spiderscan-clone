@@ -1,0 +1,2 @@
+src_id	src_name	src_mfn	src_file	src_line	dst_id	dst_name	dst_mfn	dst_file	dst_line	sink_arg_index
+30064771148	execFileSync	child_process:execFileSync	install.js	120	30064771125	execFileSync	child_process:execFileSync	install.js	102	1

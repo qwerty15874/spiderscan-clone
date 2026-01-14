@@ -1,0 +1,189 @@
+{
+  "meta": {
+    "source_matches": "results/pkg1/mbg_matches_edgeaware.json",
+    "source_evidence": "results/pkg1/verifier_evidence_v2.json"
+  },
+  "matches": [
+    {
+      "template": "T1_NET_ARCHIVE_FS_PROC",
+      "matched": true,
+      "sequence": [
+        "NET",
+        "ARCHIVE",
+        "FS",
+        "PROC"
+      ],
+      "nodes": [
+        {
+          "id": "n3",
+          "call": "https.get",
+          "label": "NET",
+          "file": "install.js",
+          "line": 148,
+          "col": 5,
+          "snippet": "https.get(url, (res) => {",
+          "block": "    https.get(url, (res) => {\n      if ((res.statusCode === 301 || res.statusCode === 302) && res.headers.location)\n        return fetch(res.headers.location).then(resolve, reject);\n      if (res.statusCode !== 200)\n        return reject(new Error(`Server responded with ${res.statusCode}`));\n      let chunks = [];\n      res.on(\"data\", (chunk) => chunks.push(chunk));\n      res.on(\"end\", () => resolve(Buffer.concat(chunks)));\n    }).on(\"error\", reject);",
+          "urls": [],
+          "domains": [],
+          "first_string_arg": "data"
+        },
+        {
+          "id": "n5",
+          "call": "zlib.unzipSync",
+          "label": "ARCHIVE",
+          "file": "install.js",
+          "line": 161,
+          "col": 14,
+          "snippet": "buffer = zlib.unzipSync(buffer);",
+          "block": "    buffer = zlib.unzipSync(buffer);",
+          "urls": [],
+          "domains": [],
+          "first_string_arg": null
+        },
+        {
+          "id": "n6",
+          "call": "fs.mkdirSync",
+          "label": "FS",
+          "file": "install.js",
+          "line": 183,
+          "col": 3,
+          "snippet": "fs2.mkdirSync(installDir);",
+          "block": "  fs2.mkdirSync(installDir);",
+          "urls": [],
+          "domains": [],
+          "first_string_arg": null
+        },
+        {
+          "id": "n8",
+          "call": "child_process.execSync",
+          "label": "PROC",
+          "file": "install.js",
+          "line": 186,
+          "col": 5,
+          "snippet": "child_process.execSync(",
+          "block": "    child_process.execSync(\n      `npm install --loglevel=error --prefer-offline --no-audit --progress=false ${pkg}@${versionFromPackageJSON}`,\n      { cwd: installDir, stdio: \"pipe\", env }\n    );",
+          "urls": [],
+          "domains": [],
+          "first_string_arg": "pipe"
+        }
+      ],
+      "reason": "edge_ok"
+    },
+    {
+      "template": "T2_NET_FS_PROC",
+      "matched": true,
+      "sequence": [
+        "NET",
+        "FS",
+        "PROC"
+      ],
+      "nodes": [
+        {
+          "id": "n3",
+          "call": "https.get",
+          "label": "NET",
+          "file": "install.js",
+          "line": 148,
+          "col": 5,
+          "snippet": "https.get(url, (res) => {",
+          "block": "    https.get(url, (res) => {\n      if ((res.statusCode === 301 || res.statusCode === 302) && res.headers.location)\n        return fetch(res.headers.location).then(resolve, reject);\n      if (res.statusCode !== 200)\n        return reject(new Error(`Server responded with ${res.statusCode}`));\n      let chunks = [];\n      res.on(\"data\", (chunk) => chunks.push(chunk));\n      res.on(\"end\", () => resolve(Buffer.concat(chunks)));\n    }).on(\"error\", reject);",
+          "urls": [],
+          "domains": [],
+          "first_string_arg": "data"
+        },
+        {
+          "id": "n6",
+          "call": "fs.mkdirSync",
+          "label": "FS",
+          "file": "install.js",
+          "line": 183,
+          "col": 3,
+          "snippet": "fs2.mkdirSync(installDir);",
+          "block": "  fs2.mkdirSync(installDir);",
+          "urls": [],
+          "domains": [],
+          "first_string_arg": null
+        },
+        {
+          "id": "n8",
+          "call": "child_process.execSync",
+          "label": "PROC",
+          "file": "install.js",
+          "line": 186,
+          "col": 5,
+          "snippet": "child_process.execSync(",
+          "block": "    child_process.execSync(\n      `npm install --loglevel=error --prefer-offline --no-audit --progress=false ${pkg}@${versionFromPackageJSON}`,\n      { cwd: installDir, stdio: \"pipe\", env }\n    );",
+          "urls": [],
+          "domains": [],
+          "first_string_arg": "pipe"
+        }
+      ],
+      "reason": "edge_ok"
+    },
+    {
+      "template": "T3_NET_FS_CHMOD_PROC",
+      "matched": true,
+      "sequence": [
+        "NET",
+        "FS",
+        "FS",
+        "PROC"
+      ],
+      "nodes": [
+        {
+          "id": "n3",
+          "call": "https.get",
+          "label": "NET",
+          "file": "install.js",
+          "line": 148,
+          "col": 5,
+          "snippet": "https.get(url, (res) => {",
+          "block": "    https.get(url, (res) => {\n      if ((res.statusCode === 301 || res.statusCode === 302) && res.headers.location)\n        return fetch(res.headers.location).then(resolve, reject);\n      if (res.statusCode !== 200)\n        return reject(new Error(`Server responded with ${res.statusCode}`));\n      let chunks = [];\n      res.on(\"data\", (chunk) => chunks.push(chunk));\n      res.on(\"end\", () => resolve(Buffer.concat(chunks)));\n    }).on(\"error\", reject);",
+          "urls": [],
+          "domains": [],
+          "first_string_arg": "data"
+        },
+        {
+          "id": "n6",
+          "call": "fs.mkdirSync",
+          "label": "FS",
+          "file": "install.js",
+          "line": 183,
+          "col": 3,
+          "snippet": "fs2.mkdirSync(installDir);",
+          "block": "  fs2.mkdirSync(installDir);",
+          "urls": [],
+          "domains": [],
+          "first_string_arg": null
+        },
+        {
+          "id": "n7",
+          "call": "fs.writeFileSync",
+          "label": "FS",
+          "file": "install.js",
+          "line": 185,
+          "col": 5,
+          "snippet": "fs2.writeFileSync(path2.join(installDir, \"package.json\"), \"{}\");",
+          "block": "    fs2.writeFileSync(path2.join(installDir, \"package.json\"), \"{}\");",
+          "urls": [],
+          "domains": [],
+          "first_string_arg": "package.json"
+        },
+        {
+          "id": "n8",
+          "call": "child_process.execSync",
+          "label": "PROC",
+          "file": "install.js",
+          "line": 186,
+          "col": 5,
+          "snippet": "child_process.execSync(",
+          "block": "    child_process.execSync(\n      `npm install --loglevel=error --prefer-offline --no-audit --progress=false ${pkg}@${versionFromPackageJSON}`,\n      { cwd: installDir, stdio: \"pipe\", env }\n    );",
+          "urls": [],
+          "domains": [],
+          "first_string_arg": "pipe"
+        }
+      ],
+      "reason": "edge_ok"
+    }
+  ]
+}

@@ -1,0 +1,133 @@
+{
+  "meta": {
+    "source_graph": "results/pkg1/sbg_graph_final.json"
+  },
+  "matches": [
+    {
+      "template": "T1_NET_ARCHIVE_FS_PROC",
+      "matched": true,
+      "sequence": [
+        "NET",
+        "ARCHIVE",
+        "FS",
+        "PROC"
+      ],
+      "nodes": [
+        {
+          "id": "n3",
+          "call": "https.get",
+          "label": "NET",
+          "file": "install.js",
+          "line": 148,
+          "col": 5
+        },
+        {
+          "id": "n5",
+          "call": "zlib.unzipSync",
+          "label": "ARCHIVE",
+          "file": "install.js",
+          "line": 161,
+          "col": 14
+        },
+        {
+          "id": "n6",
+          "call": "fs.mkdirSync",
+          "label": "FS",
+          "file": "install.js",
+          "line": 183,
+          "col": 3
+        },
+        {
+          "id": "n8",
+          "call": "child_process.execSync",
+          "label": "PROC",
+          "file": "install.js",
+          "line": 186,
+          "col": 5
+        }
+      ],
+      "reason": "edge_ok"
+    },
+    {
+      "template": "T2_NET_FS_PROC",
+      "matched": true,
+      "sequence": [
+        "NET",
+        "FS",
+        "PROC"
+      ],
+      "nodes": [
+        {
+          "id": "n3",
+          "call": "https.get",
+          "label": "NET",
+          "file": "install.js",
+          "line": 148,
+          "col": 5
+        },
+        {
+          "id": "n6",
+          "call": "fs.mkdirSync",
+          "label": "FS",
+          "file": "install.js",
+          "line": 183,
+          "col": 3
+        },
+        {
+          "id": "n8",
+          "call": "child_process.execSync",
+          "label": "PROC",
+          "file": "install.js",
+          "line": 186,
+          "col": 5
+        }
+      ],
+      "reason": "edge_ok"
+    },
+    {
+      "template": "T3_NET_FS_CHMOD_PROC",
+      "matched": true,
+      "sequence": [
+        "NET",
+        "FS",
+        "FS",
+        "PROC"
+      ],
+      "nodes": [
+        {
+          "id": "n3",
+          "call": "https.get",
+          "label": "NET",
+          "file": "install.js",
+          "line": 148,
+          "col": 5
+        },
+        {
+          "id": "n6",
+          "call": "fs.mkdirSync",
+          "label": "FS",
+          "file": "install.js",
+          "line": 183,
+          "col": 3
+        },
+        {
+          "id": "n7",
+          "call": "fs.writeFileSync",
+          "label": "FS",
+          "file": "install.js",
+          "line": 185,
+          "col": 5
+        },
+        {
+          "id": "n8",
+          "call": "child_process.execSync",
+          "label": "PROC",
+          "file": "install.js",
+          "line": 186,
+          "col": 5
+        }
+      ],
+      "reason": "edge_ok"
+    }
+  ]
+}

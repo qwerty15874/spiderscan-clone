@@ -1,0 +1,340 @@
+{
+  "meta": {
+    "source_nodes": "results/pkg1/sbg_nodes.json",
+    "source_joern_calls": "results/pkg1/joern_calls.tsv",
+    "mapped_nodes": 23,
+    "unmapped_nodes": 0,
+    "edge_count": 7,
+    "edge_type": "CTRL"
+  },
+  "nodes": [
+    {
+      "id": "n1",
+      "call": "child_process.execFileSync",
+      "label": "PROC",
+      "file": "install.js",
+      "line": 102,
+      "col": 14,
+      "joern_call_id": "30064771125",
+      "joern_call_name": "execFileSync",
+      "method_full_name": "child_process:execFileSync",
+      "joern_file": "install.js"
+    },
+    {
+      "id": "n2",
+      "call": "child_process.execFileSync",
+      "label": "PROC",
+      "file": "install.js",
+      "line": 120,
+      "col": 26,
+      "joern_call_id": "30064771148",
+      "joern_call_name": "execFileSync",
+      "method_full_name": "child_process:execFileSync",
+      "joern_file": "install.js"
+    },
+    {
+      "id": "n3",
+      "call": "https.get",
+      "label": "NET",
+      "file": "install.js",
+      "line": 148,
+      "col": 5,
+      "joern_call_id": "30064771211",
+      "joern_call_name": "get",
+      "method_full_name": "https:get",
+      "joern_file": "install.js"
+    },
+    {
+      "id": "n4",
+      "call": "fetch",
+      "label": "NET",
+      "file": "install.js",
+      "line": 150,
+      "col": 16,
+      "joern_call_id": "30064771191",
+      "joern_call_name": "fetch",
+      "method_full_name": "fetch",
+      "joern_file": "install.js"
+    },
+    {
+      "id": "n5",
+      "call": "zlib.unzipSync",
+      "label": "ARCHIVE",
+      "file": "install.js",
+      "line": 161,
+      "col": 14,
+      "joern_call_id": "30064771226",
+      "joern_call_name": "unzipSync",
+      "method_full_name": "zlib:unzipSync",
+      "joern_file": "install.js"
+    },
+    {
+      "id": "n6",
+      "call": "fs.mkdirSync",
+      "label": "FS",
+      "file": "install.js",
+      "line": 183,
+      "col": 3,
+      "joern_call_id": "30064771279",
+      "joern_call_name": "mkdirSync",
+      "method_full_name": "fs:mkdirSync",
+      "joern_file": "install.js"
+    },
+    {
+      "id": "n7",
+      "call": "fs.writeFileSync",
+      "label": "FS",
+      "file": "install.js",
+      "line": 185,
+      "col": 5,
+      "joern_call_id": "30064771281",
+      "joern_call_name": "writeFileSync",
+      "method_full_name": "fs:writeFileSync",
+      "joern_file": "install.js"
+    },
+    {
+      "id": "n8",
+      "call": "child_process.execSync",
+      "label": "PROC",
+      "file": "install.js",
+      "line": 186,
+      "col": 5,
+      "joern_call_id": "30064771285",
+      "joern_call_name": "execSync",
+      "method_full_name": "child_process:execSync",
+      "joern_file": "install.js"
+    },
+    {
+      "id": "n9",
+      "call": "fs.renameSync",
+      "label": "FS",
+      "file": "install.js",
+      "line": 191,
+      "col": 5,
+      "joern_call_id": "30064771297",
+      "joern_call_name": "renameSync",
+      "method_full_name": "fs:renameSync",
+      "joern_file": "install.js"
+    },
+    {
+      "id": "n10",
+      "call": "fs.readdirSync",
+      "label": "FS",
+      "file": "install.js",
+      "line": 200,
+      "col": 23,
+      "joern_call_id": "30064771305",
+      "joern_call_name": "readdirSync",
+      "method_full_name": "fs:readdirSync",
+      "joern_file": "install.js"
+    },
+    {
+      "id": "n11",
+      "call": "fs.lstatSync",
+      "label": "FS",
+      "file": "install.js",
+      "line": 204,
+      "col": 15,
+      "joern_call_id": "30064771315",
+      "joern_call_name": "lstatSync",
+      "method_full_name": "fs:lstatSync",
+      "joern_file": "install.js"
+    },
+    {
+      "id": "n12",
+      "call": "fs.unlinkSync",
+      "label": "FS",
+      "file": "install.js",
+      "line": 209,
+      "col": 10,
+      "joern_call_id": "30064771320",
+      "joern_call_name": "unlinkSync",
+      "method_full_name": "fs:unlinkSync",
+      "joern_file": "install.js"
+    },
+    {
+      "id": "n13",
+      "call": "fs.rmdirSync",
+      "label": "FS",
+      "file": "install.js",
+      "line": 211,
+      "col": 3,
+      "joern_call_id": "30064771322",
+      "joern_call_name": "rmdirSync",
+      "method_full_name": "fs:rmdirSync",
+      "joern_file": "install.js"
+    },
+    {
+      "id": "n14",
+      "call": "fs.writeFileSync",
+      "label": "FS",
+      "file": "install.js",
+      "line": 215,
+      "col": 3,
+      "joern_call_id": "30064771326",
+      "joern_call_name": "writeFileSync",
+      "method_full_name": "fs:writeFileSync",
+      "joern_file": "install.js"
+    },
+    {
+      "id": "n15",
+      "call": "fs.readFileSync",
+      "label": "FS",
+      "file": "install.js",
+      "line": 219,
+      "col": 16,
+      "joern_call_id": "30064771333",
+      "joern_call_name": "readFileSync",
+      "method_full_name": "fs:readFileSync",
+      "joern_file": "install.js"
+    },
+    {
+      "id": "n16",
+      "call": "fs.writeFileSync",
+      "label": "FS",
+      "file": "install.js",
+      "line": 220,
+      "col": 3,
+      "joern_call_id": "30064771335",
+      "joern_call_name": "writeFileSync",
+      "method_full_name": "fs:writeFileSync",
+      "joern_file": "install.js"
+    },
+    {
+      "id": "n17",
+      "call": "fs.linkSync",
+      "label": "FS",
+      "file": "install.js",
+      "line": 228,
+      "col": 7,
+      "joern_call_id": "30064771353",
+      "joern_call_name": "linkSync",
+      "method_full_name": "fs:linkSync",
+      "joern_file": "install.js"
+    },
+    {
+      "id": "n18",
+      "call": "fs.renameSync",
+      "label": "FS",
+      "file": "install.js",
+      "line": 229,
+      "col": 7,
+      "joern_call_id": "30064771355",
+      "joern_call_name": "renameSync",
+      "method_full_name": "fs:renameSync",
+      "joern_file": "install.js"
+    },
+    {
+      "id": "n19",
+      "call": "fs.unlinkSync",
+      "label": "FS",
+      "file": "install.js",
+      "line": 231,
+      "col": 7,
+      "joern_call_id": "30064771358",
+      "joern_call_name": "unlinkSync",
+      "method_full_name": "fs:unlinkSync",
+      "joern_file": "install.js"
+    },
+    {
+      "id": "n20",
+      "call": "fs.writeFileSync",
+      "label": "FS",
+      "file": "install.js",
+      "line": 240,
+      "col": 5,
+      "joern_call_id": "30064771368",
+      "joern_call_name": "writeFileSync",
+      "method_full_name": "fs:writeFileSync",
+      "joern_file": "install.js"
+    },
+    {
+      "id": "n21",
+      "call": "fetch",
+      "label": "NET",
+      "file": "install.js",
+      "line": 240,
+      "col": 61,
+      "joern_call_id": "30064771372",
+      "joern_call_name": "fetch",
+      "method_full_name": "fetch",
+      "joern_file": "install.js"
+    },
+    {
+      "id": "n22",
+      "call": "fs.chmodSync",
+      "label": "FS",
+      "file": "install.js",
+      "line": 241,
+      "col": 5,
+      "joern_call_id": "30064771373",
+      "joern_call_name": "chmodSync",
+      "method_full_name": "fs:chmodSync",
+      "joern_file": "install.js"
+    },
+    {
+      "id": "n23",
+      "call": "fs.existsSync",
+      "label": "FS",
+      "file": "install.js",
+      "line": 249,
+      "col": 10,
+      "joern_call_id": "30064771385",
+      "joern_call_name": "existsSync",
+      "method_full_name": "fs:existsSync",
+      "joern_file": "install.js"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "type": "CTRL",
+      "src": "n1",
+      "dst": "n2",
+      "method_full_name": "child_process:execFileSync"
+    },
+    {
+      "id": "e2",
+      "type": "CTRL",
+      "src": "n4",
+      "dst": "n21",
+      "method_full_name": "fetch"
+    },
+    {
+      "id": "e3",
+      "type": "CTRL",
+      "src": "n7",
+      "dst": "n14",
+      "method_full_name": "fs:writeFileSync"
+    },
+    {
+      "id": "e4",
+      "type": "CTRL",
+      "src": "n14",
+      "dst": "n16",
+      "method_full_name": "fs:writeFileSync"
+    },
+    {
+      "id": "e5",
+      "type": "CTRL",
+      "src": "n16",
+      "dst": "n20",
+      "method_full_name": "fs:writeFileSync"
+    },
+    {
+      "id": "e6",
+      "type": "CTRL",
+      "src": "n9",
+      "dst": "n18",
+      "method_full_name": "fs:renameSync"
+    },
+    {
+      "id": "e7",
+      "type": "CTRL",
+      "src": "n12",
+      "dst": "n19",
+      "method_full_name": "fs:unlinkSync"
+    }
+  ],
+  "unmapped": []
+}

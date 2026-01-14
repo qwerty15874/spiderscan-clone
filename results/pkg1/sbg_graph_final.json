@@ -1,0 +1,752 @@
+{
+  "meta": {
+    "source_ctrl": "results/pkg1/sbg_graph_ctrl_order.json",
+    "source_dd": "results/pkg1/sbg_graph_dd_approx_pruned.json",
+    "node_count": 23,
+    "edge_count": 67,
+    "edge_types": [
+      "CTRL_ORDER",
+      "DD_APPROX"
+    ]
+  },
+  "nodes": [
+    {
+      "id": "n1",
+      "call": "child_process.execFileSync",
+      "label": "PROC",
+      "file": "install.js",
+      "line": 102,
+      "col": 14
+    },
+    {
+      "id": "n2",
+      "call": "child_process.execFileSync",
+      "label": "PROC",
+      "file": "install.js",
+      "line": 120,
+      "col": 26
+    },
+    {
+      "id": "n3",
+      "call": "https.get",
+      "label": "NET",
+      "file": "install.js",
+      "line": 148,
+      "col": 5
+    },
+    {
+      "id": "n4",
+      "call": "fetch",
+      "label": "NET",
+      "file": "install.js",
+      "line": 150,
+      "col": 16
+    },
+    {
+      "id": "n5",
+      "call": "zlib.unzipSync",
+      "label": "ARCHIVE",
+      "file": "install.js",
+      "line": 161,
+      "col": 14
+    },
+    {
+      "id": "n6",
+      "call": "fs.mkdirSync",
+      "label": "FS",
+      "file": "install.js",
+      "line": 183,
+      "col": 3
+    },
+    {
+      "id": "n7",
+      "call": "fs.writeFileSync",
+      "label": "FS",
+      "file": "install.js",
+      "line": 185,
+      "col": 5
+    },
+    {
+      "id": "n8",
+      "call": "child_process.execSync",
+      "label": "PROC",
+      "file": "install.js",
+      "line": 186,
+      "col": 5
+    },
+    {
+      "id": "n9",
+      "call": "fs.renameSync",
+      "label": "FS",
+      "file": "install.js",
+      "line": 191,
+      "col": 5
+    },
+    {
+      "id": "n10",
+      "call": "fs.readdirSync",
+      "label": "FS",
+      "file": "install.js",
+      "line": 200,
+      "col": 23
+    },
+    {
+      "id": "n11",
+      "call": "fs.lstatSync",
+      "label": "FS",
+      "file": "install.js",
+      "line": 204,
+      "col": 15
+    },
+    {
+      "id": "n12",
+      "call": "fs.unlinkSync",
+      "label": "FS",
+      "file": "install.js",
+      "line": 209,
+      "col": 10
+    },
+    {
+      "id": "n13",
+      "call": "fs.rmdirSync",
+      "label": "FS",
+      "file": "install.js",
+      "line": 211,
+      "col": 3
+    },
+    {
+      "id": "n14",
+      "call": "fs.writeFileSync",
+      "label": "FS",
+      "file": "install.js",
+      "line": 215,
+      "col": 3
+    },
+    {
+      "id": "n15",
+      "call": "fs.readFileSync",
+      "label": "FS",
+      "file": "install.js",
+      "line": 219,
+      "col": 16
+    },
+    {
+      "id": "n16",
+      "call": "fs.writeFileSync",
+      "label": "FS",
+      "file": "install.js",
+      "line": 220,
+      "col": 3
+    },
+    {
+      "id": "n17",
+      "call": "fs.linkSync",
+      "label": "FS",
+      "file": "install.js",
+      "line": 228,
+      "col": 7
+    },
+    {
+      "id": "n18",
+      "call": "fs.renameSync",
+      "label": "FS",
+      "file": "install.js",
+      "line": 229,
+      "col": 7
+    },
+    {
+      "id": "n19",
+      "call": "fs.unlinkSync",
+      "label": "FS",
+      "file": "install.js",
+      "line": 231,
+      "col": 7
+    },
+    {
+      "id": "n20",
+      "call": "fs.writeFileSync",
+      "label": "FS",
+      "file": "install.js",
+      "line": 240,
+      "col": 5
+    },
+    {
+      "id": "n21",
+      "call": "fetch",
+      "label": "NET",
+      "file": "install.js",
+      "line": 240,
+      "col": 61
+    },
+    {
+      "id": "n22",
+      "call": "fs.chmodSync",
+      "label": "FS",
+      "file": "install.js",
+      "line": 241,
+      "col": 5
+    },
+    {
+      "id": "n23",
+      "call": "fs.existsSync",
+      "label": "FS",
+      "file": "install.js",
+      "line": 249,
+      "col": 10
+    }
+  ],
+  "edges": [
+    {
+      "id": "c1",
+      "type": "CTRL_ORDER",
+      "src": "n1",
+      "dst": "n2",
+      "file": "install.js",
+      "step": 1
+    },
+    {
+      "id": "c2",
+      "type": "CTRL_ORDER",
+      "src": "n1",
+      "dst": "n3",
+      "file": "install.js",
+      "step": 2
+    },
+    {
+      "id": "c3",
+      "type": "CTRL_ORDER",
+      "src": "n1",
+      "dst": "n4",
+      "file": "install.js",
+      "step": 3
+    },
+    {
+      "id": "c4",
+      "type": "CTRL_ORDER",
+      "src": "n2",
+      "dst": "n3",
+      "file": "install.js",
+      "step": 1
+    },
+    {
+      "id": "c5",
+      "type": "CTRL_ORDER",
+      "src": "n2",
+      "dst": "n4",
+      "file": "install.js",
+      "step": 2
+    },
+    {
+      "id": "c6",
+      "type": "CTRL_ORDER",
+      "src": "n2",
+      "dst": "n5",
+      "file": "install.js",
+      "step": 3
+    },
+    {
+      "id": "c7",
+      "type": "CTRL_ORDER",
+      "src": "n3",
+      "dst": "n4",
+      "file": "install.js",
+      "step": 1
+    },
+    {
+      "id": "c8",
+      "type": "CTRL_ORDER",
+      "src": "n3",
+      "dst": "n5",
+      "file": "install.js",
+      "step": 2
+    },
+    {
+      "id": "c9",
+      "type": "CTRL_ORDER",
+      "src": "n3",
+      "dst": "n6",
+      "file": "install.js",
+      "step": 3
+    },
+    {
+      "id": "c10",
+      "type": "CTRL_ORDER",
+      "src": "n4",
+      "dst": "n5",
+      "file": "install.js",
+      "step": 1
+    },
+    {
+      "id": "c11",
+      "type": "CTRL_ORDER",
+      "src": "n4",
+      "dst": "n6",
+      "file": "install.js",
+      "step": 2
+    },
+    {
+      "id": "c12",
+      "type": "CTRL_ORDER",
+      "src": "n4",
+      "dst": "n7",
+      "file": "install.js",
+      "step": 3
+    },
+    {
+      "id": "c13",
+      "type": "CTRL_ORDER",
+      "src": "n5",
+      "dst": "n6",
+      "file": "install.js",
+      "step": 1
+    },
+    {
+      "id": "c14",
+      "type": "CTRL_ORDER",
+      "src": "n5",
+      "dst": "n7",
+      "file": "install.js",
+      "step": 2
+    },
+    {
+      "id": "c15",
+      "type": "CTRL_ORDER",
+      "src": "n5",
+      "dst": "n8",
+      "file": "install.js",
+      "step": 3
+    },
+    {
+      "id": "c16",
+      "type": "CTRL_ORDER",
+      "src": "n6",
+      "dst": "n7",
+      "file": "install.js",
+      "step": 1
+    },
+    {
+      "id": "c17",
+      "type": "CTRL_ORDER",
+      "src": "n6",
+      "dst": "n8",
+      "file": "install.js",
+      "step": 2
+    },
+    {
+      "id": "c18",
+      "type": "CTRL_ORDER",
+      "src": "n6",
+      "dst": "n9",
+      "file": "install.js",
+      "step": 3
+    },
+    {
+      "id": "c19",
+      "type": "CTRL_ORDER",
+      "src": "n7",
+      "dst": "n8",
+      "file": "install.js",
+      "step": 1
+    },
+    {
+      "id": "c20",
+      "type": "CTRL_ORDER",
+      "src": "n7",
+      "dst": "n9",
+      "file": "install.js",
+      "step": 2
+    },
+    {
+      "id": "c21",
+      "type": "CTRL_ORDER",
+      "src": "n7",
+      "dst": "n10",
+      "file": "install.js",
+      "step": 3
+    },
+    {
+      "id": "c22",
+      "type": "CTRL_ORDER",
+      "src": "n8",
+      "dst": "n9",
+      "file": "install.js",
+      "step": 1
+    },
+    {
+      "id": "c23",
+      "type": "CTRL_ORDER",
+      "src": "n8",
+      "dst": "n10",
+      "file": "install.js",
+      "step": 2
+    },
+    {
+      "id": "c24",
+      "type": "CTRL_ORDER",
+      "src": "n8",
+      "dst": "n11",
+      "file": "install.js",
+      "step": 3
+    },
+    {
+      "id": "c25",
+      "type": "CTRL_ORDER",
+      "src": "n9",
+      "dst": "n10",
+      "file": "install.js",
+      "step": 1
+    },
+    {
+      "id": "c26",
+      "type": "CTRL_ORDER",
+      "src": "n9",
+      "dst": "n11",
+      "file": "install.js",
+      "step": 2
+    },
+    {
+      "id": "c27",
+      "type": "CTRL_ORDER",
+      "src": "n9",
+      "dst": "n12",
+      "file": "install.js",
+      "step": 3
+    },
+    {
+      "id": "c28",
+      "type": "CTRL_ORDER",
+      "src": "n10",
+      "dst": "n11",
+      "file": "install.js",
+      "step": 1
+    },
+    {
+      "id": "c29",
+      "type": "CTRL_ORDER",
+      "src": "n10",
+      "dst": "n12",
+      "file": "install.js",
+      "step": 2
+    },
+    {
+      "id": "c30",
+      "type": "CTRL_ORDER",
+      "src": "n10",
+      "dst": "n13",
+      "file": "install.js",
+      "step": 3
+    },
+    {
+      "id": "c31",
+      "type": "CTRL_ORDER",
+      "src": "n11",
+      "dst": "n12",
+      "file": "install.js",
+      "step": 1
+    },
+    {
+      "id": "c32",
+      "type": "CTRL_ORDER",
+      "src": "n11",
+      "dst": "n13",
+      "file": "install.js",
+      "step": 2
+    },
+    {
+      "id": "c33",
+      "type": "CTRL_ORDER",
+      "src": "n11",
+      "dst": "n14",
+      "file": "install.js",
+      "step": 3
+    },
+    {
+      "id": "c34",
+      "type": "CTRL_ORDER",
+      "src": "n12",
+      "dst": "n13",
+      "file": "install.js",
+      "step": 1
+    },
+    {
+      "id": "c35",
+      "type": "CTRL_ORDER",
+      "src": "n12",
+      "dst": "n14",
+      "file": "install.js",
+      "step": 2
+    },
+    {
+      "id": "c36",
+      "type": "CTRL_ORDER",
+      "src": "n12",
+      "dst": "n15",
+      "file": "install.js",
+      "step": 3
+    },
+    {
+      "id": "c37",
+      "type": "CTRL_ORDER",
+      "src": "n13",
+      "dst": "n14",
+      "file": "install.js",
+      "step": 1
+    },
+    {
+      "id": "c38",
+      "type": "CTRL_ORDER",
+      "src": "n13",
+      "dst": "n15",
+      "file": "install.js",
+      "step": 2
+    },
+    {
+      "id": "c39",
+      "type": "CTRL_ORDER",
+      "src": "n13",
+      "dst": "n16",
+      "file": "install.js",
+      "step": 3
+    },
+    {
+      "id": "c40",
+      "type": "CTRL_ORDER",
+      "src": "n14",
+      "dst": "n15",
+      "file": "install.js",
+      "step": 1
+    },
+    {
+      "id": "c41",
+      "type": "CTRL_ORDER",
+      "src": "n14",
+      "dst": "n16",
+      "file": "install.js",
+      "step": 2
+    },
+    {
+      "id": "c42",
+      "type": "CTRL_ORDER",
+      "src": "n14",
+      "dst": "n17",
+      "file": "install.js",
+      "step": 3
+    },
+    {
+      "id": "c43",
+      "type": "CTRL_ORDER",
+      "src": "n15",
+      "dst": "n16",
+      "file": "install.js",
+      "step": 1
+    },
+    {
+      "id": "c44",
+      "type": "CTRL_ORDER",
+      "src": "n15",
+      "dst": "n17",
+      "file": "install.js",
+      "step": 2
+    },
+    {
+      "id": "c45",
+      "type": "CTRL_ORDER",
+      "src": "n15",
+      "dst": "n18",
+      "file": "install.js",
+      "step": 3
+    },
+    {
+      "id": "c46",
+      "type": "CTRL_ORDER",
+      "src": "n16",
+      "dst": "n17",
+      "file": "install.js",
+      "step": 1
+    },
+    {
+      "id": "c47",
+      "type": "CTRL_ORDER",
+      "src": "n16",
+      "dst": "n18",
+      "file": "install.js",
+      "step": 2
+    },
+    {
+      "id": "c48",
+      "type": "CTRL_ORDER",
+      "src": "n16",
+      "dst": "n19",
+      "file": "install.js",
+      "step": 3
+    },
+    {
+      "id": "c49",
+      "type": "CTRL_ORDER",
+      "src": "n17",
+      "dst": "n18",
+      "file": "install.js",
+      "step": 1
+    },
+    {
+      "id": "c50",
+      "type": "CTRL_ORDER",
+      "src": "n17",
+      "dst": "n19",
+      "file": "install.js",
+      "step": 2
+    },
+    {
+      "id": "c51",
+      "type": "CTRL_ORDER",
+      "src": "n17",
+      "dst": "n20",
+      "file": "install.js",
+      "step": 3
+    },
+    {
+      "id": "c52",
+      "type": "CTRL_ORDER",
+      "src": "n18",
+      "dst": "n19",
+      "file": "install.js",
+      "step": 1
+    },
+    {
+      "id": "c53",
+      "type": "CTRL_ORDER",
+      "src": "n18",
+      "dst": "n20",
+      "file": "install.js",
+      "step": 2
+    },
+    {
+      "id": "c54",
+      "type": "CTRL_ORDER",
+      "src": "n18",
+      "dst": "n21",
+      "file": "install.js",
+      "step": 3
+    },
+    {
+      "id": "c55",
+      "type": "CTRL_ORDER",
+      "src": "n19",
+      "dst": "n20",
+      "file": "install.js",
+      "step": 1
+    },
+    {
+      "id": "c56",
+      "type": "CTRL_ORDER",
+      "src": "n19",
+      "dst": "n21",
+      "file": "install.js",
+      "step": 2
+    },
+    {
+      "id": "c57",
+      "type": "CTRL_ORDER",
+      "src": "n19",
+      "dst": "n22",
+      "file": "install.js",
+      "step": 3
+    },
+    {
+      "id": "c58",
+      "type": "CTRL_ORDER",
+      "src": "n20",
+      "dst": "n21",
+      "file": "install.js",
+      "step": 1
+    },
+    {
+      "id": "c59",
+      "type": "CTRL_ORDER",
+      "src": "n20",
+      "dst": "n22",
+      "file": "install.js",
+      "step": 2
+    },
+    {
+      "id": "c60",
+      "type": "CTRL_ORDER",
+      "src": "n20",
+      "dst": "n23",
+      "file": "install.js",
+      "step": 3
+    },
+    {
+      "id": "c61",
+      "type": "CTRL_ORDER",
+      "src": "n21",
+      "dst": "n22",
+      "file": "install.js",
+      "step": 1
+    },
+    {
+      "id": "c62",
+      "type": "CTRL_ORDER",
+      "src": "n21",
+      "dst": "n23",
+      "file": "install.js",
+      "step": 2
+    },
+    {
+      "id": "c63",
+      "type": "CTRL_ORDER",
+      "src": "n22",
+      "dst": "n23",
+      "file": "install.js",
+      "step": 1
+    },
+    {
+      "id": "d64",
+      "type": "DD_APPROX",
+      "src": "n3",
+      "dst": "n20",
+      "file": "install.js",
+      "reason_vars": [
+        "url"
+      ],
+      "src_label": "NET",
+      "dst_label": "FS"
+    },
+    {
+      "id": "d65",
+      "type": "DD_APPROX",
+      "src": "n6",
+      "dst": "n8",
+      "file": "install.js",
+      "reason_vars": [
+        "installDir"
+      ],
+      "src_label": "FS",
+      "dst_label": "PROC"
+    },
+    {
+      "id": "d66",
+      "type": "DD_APPROX",
+      "src": "n7",
+      "dst": "n8",
+      "file": "install.js",
+      "reason_vars": [
+        "installDir"
+      ],
+      "src_label": "FS",
+      "dst_label": "PROC"
+    },
+    {
+      "id": "d67",
+      "type": "DD_APPROX",
+      "src": "n21",
+      "dst": "n22",
+      "file": "install.js",
+      "reason_vars": [
+        "binPath"
+      ],
+      "src_label": "NET",
+      "dst_label": "FS"
+    }
+  ]
+}

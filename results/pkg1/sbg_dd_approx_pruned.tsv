@@ -1,0 +1,5 @@
+src	src_label	dst	dst_label	type	reason_vars
+n3	NET	n20	FS	DD_APPROX	url
+n6	FS	n8	PROC	DD_APPROX	installDir
+n7	FS	n8	PROC	DD_APPROX	installDir
+n21	NET	n22	FS	DD_APPROX	binPath
