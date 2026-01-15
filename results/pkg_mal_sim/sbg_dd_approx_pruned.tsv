@@ -1,0 +1,7 @@
+src	src_label	dst	dst_label	type	reason_vars
+n2	NET	n3	FS	DD_APPROX	bin,echo,n,outPath,sh,sim,spiderscan
+n2	NET	n4	FS	DD_APPROX	outPath
+n2	NET	n5	PROC	DD_APPROX	sim,spiderscan
+n2	NET	n6	PROC	DD_APPROX	sim,spiderscan
+n3	FS	n5	PROC	DD_APPROX	sim,spiderscan
+n3	FS	n6	PROC	DD_APPROX	sim,spiderscan

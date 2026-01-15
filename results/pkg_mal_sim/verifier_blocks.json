@@ -1,0 +1,69 @@
+{
+  "meta": {
+    "source_nodes": "results/pkg_mal_sim/sbg_nodes.json",
+    "package_dir": "samples/pkg_mal_sim",
+    "count": 6
+  },
+  "nodes": [
+    {
+      "id": "n1",
+      "call": "fs.mkdirSync",
+      "label": "FS",
+      "file": "install.js",
+      "line": 13,
+      "col": 1,
+      "snippet": "fs.mkdirSync(outDir, { recursive: true });",
+      "block": "fs.mkdirSync(outDir, { recursive: true });"
+    },
+    {
+      "id": "n2",
+      "call": "https.get",
+      "label": "NET",
+      "file": "install.js",
+      "line": 15,
+      "col": 1,
+      "snippet": "https.get(url, (res) => {",
+      "block": "https.get(url, (res) => {\n  let data = \"\";\n  res.on(\"data\", (chunk) => (data += chunk));\n  res.on(\"end\", () => {\n    // 2) FS: 받아온 데이터를 파일로 기록(무해)\n    fs.writeFileSync(outPath, \"#!/bin/sh\\n\" + \"echo 'spiderscan sim'\\n\");\n    // 3) FS(chmod): 실행 권한 부여(형태만)"
+    },
+    {
+      "id": "n3",
+      "call": "fs.writeFileSync",
+      "label": "FS",
+      "file": "install.js",
+      "line": 20,
+      "col": 5,
+      "snippet": "fs.writeFileSync(outPath, \"#!/bin/sh\\n\" + \"echo 'spiderscan sim'\\n\");",
+      "block": "    fs.writeFileSync(outPath, \"#!/bin/sh\\n\" + \"echo 'spiderscan sim'\\n\");"
+    },
+    {
+      "id": "n4",
+      "call": "fs.chmodSync",
+      "label": "FS",
+      "file": "install.js",
+      "line": 22,
+      "col": 5,
+      "snippet": "fs.chmodSync(outPath, 0o755);",
+      "block": "    fs.chmodSync(outPath, 0o755);"
+    },
+    {
+      "id": "n5",
+      "call": "child_process.execSync",
+      "label": "PROC",
+      "file": "install.js",
+      "line": 25,
+      "col": 5,
+      "snippet": "child_process.execSync('node -e \"console.log(\\'spiderscan sim exec\\')\"', { stdio: \"inherit\" });",
+      "block": "    child_process.execSync('node -e \"console.log(\\'spiderscan sim exec\\')\"', { stdio: \"inherit\" });"
+    },
+    {
+      "id": "n6",
+      "call": "child_process.execSync",
+      "label": "PROC",
+      "file": "install.js",
+      "line": 29,
+      "col": 3,
+      "snippet": "child_process.execSync('node -e \"console.log(\\'spiderscan sim net error\\')\"', { stdio: \"inherit\" });",
+      "block": "  child_process.execSync('node -e \"console.log(\\'spiderscan sim net error\\')\"', { stdio: \"inherit\" });"
+    }
+  ]
+}

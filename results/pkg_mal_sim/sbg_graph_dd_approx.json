@@ -1,0 +1,186 @@
+{
+  "meta": {
+    "source_blocks": "results/pkg_mal_sim/verifier_blocks.json",
+    "package_dir": "samples/pkg_mal_sim",
+    "node_count": 6,
+    "edge_count": 11,
+    "edge_type": "DD_APPROX"
+  },
+  "nodes": [
+    {
+      "id": "n1",
+      "call": "fs.mkdirSync",
+      "label": "FS",
+      "file": "install.js",
+      "line": 13,
+      "col": 1
+    },
+    {
+      "id": "n2",
+      "call": "https.get",
+      "label": "NET",
+      "file": "install.js",
+      "line": 15,
+      "col": 1
+    },
+    {
+      "id": "n3",
+      "call": "fs.writeFileSync",
+      "label": "FS",
+      "file": "install.js",
+      "line": 20,
+      "col": 5
+    },
+    {
+      "id": "n4",
+      "call": "fs.chmodSync",
+      "label": "FS",
+      "file": "install.js",
+      "line": 22,
+      "col": 5
+    },
+    {
+      "id": "n5",
+      "call": "child_process.execSync",
+      "label": "PROC",
+      "file": "install.js",
+      "line": 25,
+      "col": 5
+    },
+    {
+      "id": "n6",
+      "call": "child_process.execSync",
+      "label": "PROC",
+      "file": "install.js",
+      "line": 29,
+      "col": 3
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "type": "DD_APPROX",
+      "src": "n1",
+      "dst": "n2",
+      "file": "install.js",
+      "reason_vars": [
+        "fs"
+      ]
+    },
+    {
+      "id": "e2",
+      "type": "DD_APPROX",
+      "src": "n1",
+      "dst": "n3",
+      "file": "install.js",
+      "reason_vars": [
+        "fs"
+      ]
+    },
+    {
+      "id": "e3",
+      "type": "DD_APPROX",
+      "src": "n1",
+      "dst": "n4",
+      "file": "install.js",
+      "reason_vars": [
+        "fs"
+      ]
+    },
+    {
+      "id": "e4",
+      "type": "DD_APPROX",
+      "src": "n2",
+      "dst": "n3",
+      "file": "install.js",
+      "reason_vars": [
+        "bin",
+        "echo",
+        "fs",
+        "n",
+        "outPath",
+        "sh",
+        "sim",
+        "spiderscan",
+        "writeFileSync"
+      ]
+    },
+    {
+      "id": "e5",
+      "type": "DD_APPROX",
+      "src": "n2",
+      "dst": "n4",
+      "file": "install.js",
+      "reason_vars": [
+        "fs",
+        "outPath"
+      ]
+    },
+    {
+      "id": "e6",
+      "type": "DD_APPROX",
+      "src": "n2",
+      "dst": "n5",
+      "file": "install.js",
+      "reason_vars": [
+        "sim",
+        "spiderscan"
+      ]
+    },
+    {
+      "id": "e7",
+      "type": "DD_APPROX",
+      "src": "n2",
+      "dst": "n6",
+      "file": "install.js",
+      "reason_vars": [
+        "sim",
+        "spiderscan"
+      ]
+    },
+    {
+      "id": "e8",
+      "type": "DD_APPROX",
+      "src": "n3",
+      "dst": "n4",
+      "file": "install.js",
+      "reason_vars": [
+        "fs",
+        "outPath"
+      ]
+    },
+    {
+      "id": "e9",
+      "type": "DD_APPROX",
+      "src": "n3",
+      "dst": "n5",
+      "file": "install.js",
+      "reason_vars": [
+        "sim",
+        "spiderscan"
+      ]
+    },
+    {
+      "id": "e10",
+      "type": "DD_APPROX",
+      "src": "n3",
+      "dst": "n6",
+      "file": "install.js",
+      "reason_vars": [
+        "sim",
+        "spiderscan"
+      ]
+    },
+    {
+      "id": "e11",
+      "type": "DD_APPROX",
+      "src": "n5",
+      "dst": "n6",
+      "file": "install.js",
+      "reason_vars": [
+        "sim",
+        "spiderscan"
+      ]
+    }
+  ]
+}

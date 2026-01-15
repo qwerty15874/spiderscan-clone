@@ -1,0 +1,157 @@
+{
+  "meta": {
+    "source_nodes": "results/pkg_mal_sim/sbg_nodes.json",
+    "node_count": 6,
+    "edge_count": 12,
+    "edge_type": "CTRL_ORDER",
+    "k": 3
+  },
+  "nodes": [
+    {
+      "id": "n1",
+      "call": "fs.mkdirSync",
+      "label": "FS",
+      "file": "install.js",
+      "line": 13,
+      "col": 1
+    },
+    {
+      "id": "n2",
+      "call": "https.get",
+      "label": "NET",
+      "file": "install.js",
+      "line": 15,
+      "col": 1
+    },
+    {
+      "id": "n3",
+      "call": "fs.writeFileSync",
+      "label": "FS",
+      "file": "install.js",
+      "line": 20,
+      "col": 5
+    },
+    {
+      "id": "n4",
+      "call": "fs.chmodSync",
+      "label": "FS",
+      "file": "install.js",
+      "line": 22,
+      "col": 5
+    },
+    {
+      "id": "n5",
+      "call": "child_process.execSync",
+      "label": "PROC",
+      "file": "install.js",
+      "line": 25,
+      "col": 5
+    },
+    {
+      "id": "n6",
+      "call": "child_process.execSync",
+      "label": "PROC",
+      "file": "install.js",
+      "line": 29,
+      "col": 3
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "type": "CTRL_ORDER",
+      "src": "n1",
+      "dst": "n2",
+      "file": "install.js",
+      "step": 1
+    },
+    {
+      "id": "e2",
+      "type": "CTRL_ORDER",
+      "src": "n1",
+      "dst": "n3",
+      "file": "install.js",
+      "step": 2
+    },
+    {
+      "id": "e3",
+      "type": "CTRL_ORDER",
+      "src": "n1",
+      "dst": "n4",
+      "file": "install.js",
+      "step": 3
+    },
+    {
+      "id": "e4",
+      "type": "CTRL_ORDER",
+      "src": "n2",
+      "dst": "n3",
+      "file": "install.js",
+      "step": 1
+    },
+    {
+      "id": "e5",
+      "type": "CTRL_ORDER",
+      "src": "n2",
+      "dst": "n4",
+      "file": "install.js",
+      "step": 2
+    },
+    {
+      "id": "e6",
+      "type": "CTRL_ORDER",
+      "src": "n2",
+      "dst": "n5",
+      "file": "install.js",
+      "step": 3
+    },
+    {
+      "id": "e7",
+      "type": "CTRL_ORDER",
+      "src": "n3",
+      "dst": "n4",
+      "file": "install.js",
+      "step": 1
+    },
+    {
+      "id": "e8",
+      "type": "CTRL_ORDER",
+      "src": "n3",
+      "dst": "n5",
+      "file": "install.js",
+      "step": 2
+    },
+    {
+      "id": "e9",
+      "type": "CTRL_ORDER",
+      "src": "n3",
+      "dst": "n6",
+      "file": "install.js",
+      "step": 3
+    },
+    {
+      "id": "e10",
+      "type": "CTRL_ORDER",
+      "src": "n4",
+      "dst": "n5",
+      "file": "install.js",
+      "step": 1
+    },
+    {
+      "id": "e11",
+      "type": "CTRL_ORDER",
+      "src": "n4",
+      "dst": "n6",
+      "file": "install.js",
+      "step": 2
+    },
+    {
+      "id": "e12",
+      "type": "CTRL_ORDER",
+      "src": "n5",
+      "dst": "n6",
+      "file": "install.js",
+      "step": 1
+    }
+  ]
+}

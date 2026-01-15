@@ -1,0 +1,93 @@
+{
+  "meta": {
+    "source_graph": "results/pkg_mal_sim/sbg_graph_final.json"
+  },
+  "matches": [
+    {
+      "template": "T1_NET_ARCHIVE_FS_PROC",
+      "matched": false,
+      "reason": "no_label_sequence"
+    },
+    {
+      "template": "T2_NET_FS_PROC",
+      "matched": true,
+      "sequence": [
+        "NET",
+        "FS",
+        "PROC"
+      ],
+      "nodes": [
+        {
+          "id": "n2",
+          "call": "https.get",
+          "label": "NET",
+          "file": "install.js",
+          "line": 15,
+          "col": 1
+        },
+        {
+          "id": "n3",
+          "call": "fs.writeFileSync",
+          "label": "FS",
+          "file": "install.js",
+          "line": 20,
+          "col": 5
+        },
+        {
+          "id": "n5",
+          "call": "child_process.execSync",
+          "label": "PROC",
+          "file": "install.js",
+          "line": 25,
+          "col": 5
+        }
+      ],
+      "reason": "edge_ok"
+    },
+    {
+      "template": "T3_NET_FS_CHMOD_PROC",
+      "matched": true,
+      "sequence": [
+        "NET",
+        "FS",
+        "FS",
+        "PROC"
+      ],
+      "nodes": [
+        {
+          "id": "n2",
+          "call": "https.get",
+          "label": "NET",
+          "file": "install.js",
+          "line": 15,
+          "col": 1
+        },
+        {
+          "id": "n3",
+          "call": "fs.writeFileSync",
+          "label": "FS",
+          "file": "install.js",
+          "line": 20,
+          "col": 5
+        },
+        {
+          "id": "n4",
+          "call": "fs.chmodSync",
+          "label": "FS",
+          "file": "install.js",
+          "line": 22,
+          "col": 5
+        },
+        {
+          "id": "n5",
+          "call": "child_process.execSync",
+          "label": "PROC",
+          "file": "install.js",
+          "line": 25,
+          "col": 5
+        }
+      ],
+      "reason": "edge_ok"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+src	dst	type	file	reason_vars
+n1	n2	DD_APPROX	install.js	fs
+n1	n3	DD_APPROX	install.js	fs
+n1	n4	DD_APPROX	install.js	fs
+n2	n3	DD_APPROX	install.js	bin,echo,fs,n,outPath,sh,sim,spiderscan,writeFileSync
+n2	n4	DD_APPROX	install.js	fs,outPath
+n2	n5	DD_APPROX	install.js	sim,spiderscan
+n2	n6	DD_APPROX	install.js	sim,spiderscan
+n3	n4	DD_APPROX	install.js	fs,outPath
+n3	n5	DD_APPROX	install.js	sim,spiderscan
+n3	n6	DD_APPROX	install.js	sim,spiderscan
+n5	n6	DD_APPROX	install.js	sim,spiderscan
